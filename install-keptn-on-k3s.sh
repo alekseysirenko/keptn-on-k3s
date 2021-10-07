@@ -318,7 +318,7 @@ function get_oneagent {
 
   export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
   helm install dynatrace-oneagent-operator \
-    dynatrace/dynatrace-oneagent-operator -n\
+    dynatrace/dynatrace-oneagent-operator --version 0.10.1 -n\
     dynatrace --values oneagent_values.yaml
 
   # TODO -once ActiveGate supports local k8s API -> Install OneAgent Operator & Active Gate instead of just OneAgent Operator
